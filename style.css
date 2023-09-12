@@ -1,12 +1,14 @@
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: rgb(34,193,195);
+background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
 }
 
-.header {
+/* .header {
   padding: 30px;
   background-color: aqua;
   margin-bottom: 50px;
-}
+} */
 
 .title{
 
@@ -43,6 +45,6 @@ body {
 .footer p {
   margin-top: 120px;
   text-align: center;
-  background-color: aqua;
+
   padding: 20px 0px;
 }
