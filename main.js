@@ -1,13 +1,13 @@
 // Function to update the current day of the week
 function updateDayOfWeek() {
   const daysOfWeek = [
-    "sunday",
-    "monday",
-    "tuesday",
-    "wednesday",
-    "thursday",
-    "friday",
-    "saturday",
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
   ];
   const currentDate = new Date();
   const dayIndex = currentDate.getUTCDay();
@@ -18,13 +18,8 @@ function updateDayOfWeek() {
 // Function to update the current UTC time with milliseconds
 function updateUTCTime() {
   const currentDate = new Date();
-  const hours = String(currentDate.getUTCHours()).padStart(2, "0");
-  const minutes = String(currentDate.getUTCMinutes()).padStart(2, "0");
-  const seconds = String(currentDate.getUTCSeconds()).padStart(2, "0");
-  const milliseconds = String(currentDate.getUTCMilliseconds()).padStart(3, "0");
-
-  const utcTime = `${hours}:${minutes}:${seconds}.${milliseconds}`;
-  document.getElementById("utcTime").textContent = utcTime;
+  const utcMilliseconds = currentDate.getTime(); // This gets the milliseconds since the Unix epoch
+  document.getElementById("utcTime").textContent = utcMilliseconds + " ms";
 }
 
 updateDayOfWeek();
