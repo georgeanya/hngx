@@ -7,11 +7,17 @@ body {
   background-color: aqua;
   margin-bottom: 50px;
 }
+
+.title{
+
+  text-align: center;
+  font-size: 32px;
+}
 .name {
   text-align: center;
 }
 .name h2 {
-  font-size: 32px;
+  font-size: 27px;
 }
 .image {
   display: flex;
@@ -24,7 +30,7 @@ body {
 }
 .track {
   text-align: center;
-  font-size: 32px;
+  font-size: 25px;
 }
 .date {
   text-align: center;
