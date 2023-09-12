@@ -1,31 +1,23 @@
-// Function to update the current day of the week
-function updateDayOfWeek() {
-  const daysOfWeek = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
-  const currentDate = new Date();
-  const dayIndex = currentDate.getUTCDay();
-  const dayOfWeek = daysOfWeek[dayIndex];
-  document.getElementById("dayOfWeek").textContent = dayOfWeek;
-}
+const day = document.getElementById("currentDay");
+const UTC_time = document.getElementById("currentTime");
 
+const date = new Date();
 
-function updateUTCTime() {
-  const currentDate = new Date();
-  const utcMilliseconds = currentDate.getTime();
-  document.getElementById("utcTime").textContent = utcMilliseconds;
-}
+const daysOfWeek = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
 
+const dayOfWeek = daysOfWeek[date.getDay()];
 
+day.innerHTML = dayOfWeek;
 
-updateDayOfWeek();
-updateUTCTime();
-
-setInterval(updateDayOfWeek, 60000);
-setInterval(updateUTCTime, 1000); // Update every 10 milliseconds
+setInterval(() => {
+  const currentUTCMilliseconds = new Date().getTime();
+  UTC_time.innerHTML = `${currentUTCMilliseconds}`;
+}, 1000);

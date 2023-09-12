@@ -2,48 +2,28 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>HNGX Task 1</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>thegeorgeanya HNG Project</title>
+    <link rel="stylesheet" href="./style.css" />
   </head>
-
   <body>
-    <div class="header"></div>
-    <h2 class="title">My Personal Profile</h2>
-    <div class="image">
-      <img
-        data-testid="slackDisplayImage"
-        src="./IMG_4956.jpg"
-        alt="George Anya's profile img"
-      />
-    </div>
-    <div class="name">
-      <h2 data-testid="slackUserName">George Anya</h2>
-    </div>
-    <div data-testid="myTrack" class="track">
-      <p>I am in the <span>frontend</span> track</p>
-    </div>
-    <div class="date">
-      <p>
-        Today is
-        <span id="dayOfWeek" data-testid="currentDayOfTheWeek"></span>
-        and the GMT time is
-        <span id="utcTime" data-testid="currentUTCTime"></span>
-      </p>
-    </div>
-    <p class="repo">
-      Checkout my code
-      <a data-testid="githubURL" href="https://github.com/georgeanya/hngx"
-        >here</a
-      >
-    </p>
+    <main class="container">
+      <h1 data-testid="slackUserName" class="slackName">thegeorgeanya</h1>
 
-    <footer>
-      <div class="footer">
-        <p>HNGX Frontend Task 1</p>
+      <img data-testid="slackDisplayImage" class="slackImage" src="./IMG_4956.jpg"
+          alt="thegeorgeanya">
+
+      <div class="day_Time">
+          <p data-testid="currentDayOfTheWeek" id="currentDay"></p>
+          <p data-testid="currentUTCTime" class="time" id="currentTime"></p>
       </div>
-    </footer>
-    <script src="main.js"></script>
+
+      <p data-testid="myTrack" id="track">Frontend </p>
+      <a href="https://github.com/Martin-IJ/HNG-Frontend-Stage1" target="_blank" data-testid="githubURL" class="github"
+        >GitHub
+      </a>
+  </main>
+
+    <script src="./main.js"></script>
   </body>
 </html>
