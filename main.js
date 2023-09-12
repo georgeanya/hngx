@@ -15,15 +15,17 @@ function updateDayOfWeek() {
   document.getElementById("dayOfWeek").textContent = dayOfWeek;
 }
 
-// Function to update the current UTC time with milliseconds
+
 function updateUTCTime() {
   const currentDate = new Date();
-  const utcMilliseconds = currentDate.getTime(); // This gets the milliseconds since the Unix epoch
-  document.getElementById("utcTime").textContent = utcMilliseconds + " ms";
+  const utcMilliseconds = currentDate.getTime();
+  document.getElementById("utcTime").textContent = utcMilliseconds;
 }
+
+
 
 updateDayOfWeek();
 updateUTCTime();
 
 setInterval(updateDayOfWeek, 60000);
-setInterval(updateUTCTime, 10); // Update every 10 milliseconds
+setInterval(updateUTCTime, 1000); // Update every 10 milliseconds
